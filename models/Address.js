@@ -10,6 +10,8 @@ const Address = db.define("Address", {
   city: { type: DataTypes.STRING, required: true },
 });
 
+User.hasMany(Address);
+
 Address.belongsTo(User);
 
 module.exports = Address;
